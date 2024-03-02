@@ -1,6 +1,5 @@
 package skillcheck.service;
 
-import java.sql.PreparedStatement;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -13,7 +12,6 @@ import skillcheck.bean.ResponseBean;
 import skillcheck.constant.ConstMessage;
 import skillcheck.constant.ConstSQL;
 import skillcheck.dao.EmployeeDao;
-import skillcheck.dao.EmployeeDao.ExecuteCase;
 import skillcheck.exception.MVCException;
 import skillcheck.logger.Logger;
 
