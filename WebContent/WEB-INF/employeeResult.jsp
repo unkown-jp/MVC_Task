@@ -69,10 +69,10 @@
                 
                 <!-- Tips: ループにより取得したリスト内の社員情報Beanを使用すること -->
 				<td id="empId"><%=emp.getEmpId()%></td>
-				<td title="[ここへ記述]"><%=emp.getName()%></td>
-				<td title="[ここへ記述]"><%=emp.getMail()%></td>
-				<td title="[ここへ記述]"><%=emp.getProgramingLanguage()%></td>
-				<td title="[ここへ記述]"><%=emp.getComment()%></td>
+				<td title="name"><%=emp.getName()%></td>
+				<td title="mail"><%=emp.getMail()%></td>
+				<td title="programingLanguage"><%=emp.getProgramingLanguage()%></td>
+				<td title="comment"><%=emp.getComment()%></td>
                 <td>
                     <form action="/MVC_Task/employee" method="get">
                         <input type="hidden" name="sender" value="/employeeResult.jsp"></input>
