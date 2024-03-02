@@ -94,7 +94,18 @@ public final class EmployeeBean {
         return _password;
     }
 
-    /**
+    
+    /** @return String型の名前 */
+    public String getName() {
+		return _name;
+	}
+
+	/** @param _name <pre>セットするStringクラスの名前</pre> */
+	public void setName(String _name) {
+		this._name = _name;
+	}
+
+	/**
      * @param mail <pre>セットするStringクラスのメールアドレス</pre>
      */
     public void setMail(String mail) {
