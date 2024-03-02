@@ -93,16 +93,17 @@ public final class EmployeeBean {
     public String getPassword() {
         return _password;
     }
-
+    
+    /** 
+     * @param name <pre>セットするStringクラスの名前</pre>
+     */
+    public void setName(String name) {
+    	this._name = name;
+    }
     
     /** @return String型の名前 */
     public String getName() {
 		return _name;
-	}
-
-	/** @param _name <pre>セットするStringクラスの名前</pre> */
-	public void setName(String _name) {
-		this._name = _name;
 	}
 
 	/**
