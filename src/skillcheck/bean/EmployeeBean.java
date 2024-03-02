@@ -49,7 +49,7 @@ public final class EmployeeBean {
     public EmployeeBean(String empId, String password, String name, String mail, String programingLanguage, String comment) {
         this._empId = empId;
         this._password = password;
-        [ここへ記述];
+        this._name = name;
         this._mail = mail;
         this._programingLanguage = programingLanguage;
         this._comment = comment;
@@ -66,7 +66,7 @@ public final class EmployeeBean {
      * @param comment <pre>コメント</pre>
      * @param deleteFlg <pre>削除フラグ</pre>
      */
-    public EmployeeBean(String empId, [ここへ記述], String name, String mail, String programingLanguage, String comment, String deleteFlg) {
+    public EmployeeBean(String empId, String password, String name, String mail, String programingLanguage, String comment, String deleteFlg) {
         this._empId = empId;
         this._password = password;
         this._name = name;
