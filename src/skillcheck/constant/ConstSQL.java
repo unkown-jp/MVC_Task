@@ -13,7 +13,7 @@ public final class ConstSQL {
     public static final String JDBC_POSTGRES_DRIVER = "org.postgresql.Driver";
     /** JDMC接続先情報 */
     // FIXME Step-2-1: 接続先設定を参照して記述すること。
-    public static final String JDBC_CONNECTION = "jdbc:postgresql://localhost:[ポート番号]/[データベース名]?useUnicode=true&characterEncoding=utf8";
+    public static final String JDBC_CONNECTION = "jdbc:postgresql://localhost:5432/lesson_db?useUnicode=true&characterEncoding=utf8";
     /** ユーザー名 */
     public static final String JDBC_POSTGRES_USER = "postgres";
     /** パスワード */
@@ -21,7 +21,7 @@ public final class ConstSQL {
 
     // FIXME Step-2-2: [SQL-SELECT] 社員情報テーブルより、作成日時、更新日時、削除フラグを除いたカラムを取得するクエリを作成しなさい。
     /** 社員情報一覧取得用クエリ: 取得カラム + 取得元テーブル */
-    public static final String SELECT_BASE = "SELECT [ここへ記述] FROM employee";
+    public static final String SELECT_BASE = "SELECT emp_id, password, name, mail, programing_language, comment FROM employee";
     /** 社員情報一覧取得用クエリ: 削除されていない社員情報を社員番号順に取得 */
     public static final String SELECT_BY_DELETE_FLG_ZERO = " WHERE delete_flg = '0' ORDER BY emp_id";
     /** 社員番号を条件とするクエリ: 完全一致 */
