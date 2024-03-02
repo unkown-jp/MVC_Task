@@ -40,7 +40,7 @@ public abstract class BaseServlet extends HttpServlet {
     
     // FIXME Step-4-2: 実行結果表示用のjspファイルのパスを記述しなさい。
     // Tips: login.jspとは違ってブラウザのアドレスバーにURL直打ちでアクセスできないようにWEB-INF配下に配置してあるので注意してください。
-    protected static final String CONST_DESTINATION_RESULT_JSP = "WEB-INF/employeeResult.jsp";
+    protected static final String CONST_DESTINATION_RESULT_JSP = "/WEB-INF/employeeResult.jsp";
 
     /* フィールド変数の定義 */
     /** フォーワード先 */
