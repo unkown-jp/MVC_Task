@@ -152,7 +152,7 @@ public abstract class BaseServlet extends HttpServlet {
             // Tips1: 社員情報管理サービスはインスタンスが生成済みのものを利用すること
             // Tips2: 完全一致検索の社員情報取得を呼び出すこと
             // Tips3: 第二引数の渡し方に注意すること
-        	responseBean = this.ems.getEmployeeData(ExecuteCase.FIND_BY_EMPID, new EmployeeBean());
+        	responseBean = this.ems.getEmployeeData(ExecuteCase.FIND_BY_EMPID, new EmployeeBean(reqEmpId));
 
             // 最初の1件を取得
             resEmployeeBean = responseBean.getEmplyeeBeanList().stream().findFirst().orElse(null);
