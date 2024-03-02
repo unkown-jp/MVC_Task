@@ -104,12 +104,12 @@ public final class EmployeeManagementService extends BaseService implements Empl
                 // FIXME Step-5-4: SQLの抽出結果（resultSet）の各カラムデータを該当する社員情報Beanへセットしなさい。
                 // Tips: セット項目: 社員番号、パスワード、名前、メールアドレス、プログラミング言語、コメント
                 EmployeeBean employeeBean = new EmployeeBean(
-                        this.resultSet.getString("[ここへ記述]"),
-                        this.resultSet.getString("[ここへ記述]"),
-                        this.resultSet.getString("[ここへ記述]"),
-                        this.resultSet.getString("[ここへ記述]"),
-                        this.resultSet.getString("[ここへ記述]"),
-                        this.resultSet.getString("[ここへ記述]"));
+                        this.resultSet.getString("emp_id"),
+                        this.resultSet.getString("password"),
+                        this.resultSet.getString("name"),
+                        this.resultSet.getString("mail"),
+                        this.resultSet.getString("programing_language"),
+                        this.resultSet.getString("comment"));
 
                 // 社員情報リストへ追加
                 empResultList.add(employeeBean);
