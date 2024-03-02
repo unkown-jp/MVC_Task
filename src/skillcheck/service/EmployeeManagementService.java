@@ -191,7 +191,9 @@ public final class EmployeeManagementService extends BaseService implements Empl
                 // FIXME Step-5-3-1: pEmployeeBeanListの「1件目の要素のみ」から社員情報を取得しなさい。
                 // Tips1: ループ文を使用すること（正解は複数パターンあります）
             	// Tips2: 格納先はローカル変数のempとすること
-            	[ここへ記述]
+            	for (int i = 0; i < 1; i++) {
+            		emp = pEmployeeBeanList.get(i);
+            	}
             	
                 if (Objects.nonNull(emp)) {
                     Logger.log(new Throwable(), "pEmployeeBeanList[0].empId = " + emp.getEmpId());
@@ -201,7 +203,7 @@ public final class EmployeeManagementService extends BaseService implements Empl
                     // FIXME Step-5-3-2: 以下の手順に沿って適当な処理を記述しなさい。
                     // Tips1：　上記で構築したSELECT文を引数にして、connectionよりプリペアードステートメントオブジェクトを作成
                     // Tips2: sbQueryは、sbQuery.toString()でStringへ型変換可能
-                    [ここへ記述]
+                    this.preparedStatement = this.connection.prepareStatement(sbQuery.toString());
                     
                     // LIKEを使用するため、パラメータを編集
                     final String empId = ExecuteCase.FIND_BY_EMPID_WITH_LIKE.equals(eCase)
@@ -210,10 +212,10 @@ public final class EmployeeManagementService extends BaseService implements Empl
 
                     // FIXME Step-5-3-3: preparedStatementに適切なパラメーターをセットしなさい。
                     // Tips: パラメータをセットするインデックスに注意
-                    this.preparedStatement.setString([ここへ記述], [ここへ記述]);
+                    this.preparedStatement.setString(1, empId);
 
                     // FIXME Step-5-3-4: preparedStatementよりSQL(SELECT文)を実行し、resultSetへ結果を格納しなさい。
-                    [ここへ記述]
+                    this.resultSet = preparedStatement.executeQuery();
 
                     Logger.log(new Throwable(), "SQL: " +  this.preparedStatement.toString());
                 }
