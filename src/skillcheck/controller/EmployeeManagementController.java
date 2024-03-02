@@ -125,7 +125,8 @@ public final class EmployeeManagementController extends BaseServlet {
             if (!isLoginError && hasSession) {
                 this.getServletContext().getRequestDispatcher(this.destinationTarget).forward(request, response);
             } else {
-                response.sendRedirect(CONST_DESTINATION_LOGIN_JSP);
+            	// FIXME Step-3-4: ログイン失敗の場合、ログイン画面にリダイレクトさせるようにsendRedirect内に記述しなさい。
+                response.sendRedirect(request.getContextPath() + CONST_DESTINATION_LOGIN_JSP);
             }
 
             this.ems = null;
