@@ -70,8 +70,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <!-- FIXME Step-6-1: login.jspに適用するcssファイルのリンクタグを記述しなさい。-->
 <!-- Tips: common.css、login.cssの2つを適用 ※適用するcssファイルのパスの書き方に注意　-->
-[ここへ記述]
-[ここへ記述]
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/login.css">
 <title>ログイン</title>
 </head>
 <body>
@@ -83,12 +83,12 @@
             <!-- 手順1. エラー（message）表示時に使用するlabelタグの準備-->
             <!-- 手順2. class属性と、適用するスタイルを準備したlabelタグに記述-->
             <!-- Tips: common.cssより赤色の文字色を定義しているスタイルを確認 -->
-            [ここへ記述]
+            <label class="error-label"><%= message %></label>
             <br>
         <% } %>
         <!-- FIXME Step-6-3: formタグのaction属性に送信先URIを記述しなさい。 -->
         <!-- Tips: web.xmlに記述されているservlet-nameを記述 -->
-        <form action="[ここへ記述]" method="post">
+        <form action="employee" method="post">
             <div class="div-input-flex-area">
                 <div>
                     <label>社員番号　: </label>
