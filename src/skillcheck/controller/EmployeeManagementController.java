@@ -69,7 +69,7 @@ public final class EmployeeManagementController extends BaseServlet {
         Function<HttpServletRequest, List<String>> rmdGetEmpIdList = (rmdRequest) -> {
             // FIXME Step-3-1: jspからPOSTで送信されてきたリクエストパラメーターの社員番号を取得しなさい。
             // Tips: jsp側のname属性と一致させること
-        	final String pEmpId = rmdRequest.getParameter("[ここへ記述]");
+        	final String pEmpId = rmdRequest.getParameter("empId");
             return Arrays.asList(pEmpId);
         };
         /* 関数型インターフェース（ラムダ式）- END */
@@ -89,7 +89,7 @@ public final class EmployeeManagementController extends BaseServlet {
 
             // FIXME Step-3-2: 社員情報管理サービスのインスタンス変数を生成しなさい。
             // Tips: 定義済みフィールド変数を使用
-            [ここへ記述]
+            this.ems = new EmployeeManagementService();
 
             reqEmpIdList = rmdGetEmpIdList.apply(request);
             reqEmpIdList.forEach(id -> Logger.log(new Throwable(), "reqEmpId = " + id));
@@ -117,7 +117,7 @@ public final class EmployeeManagementController extends BaseServlet {
 
             // FIXME Step-3-3: 取得結果（ResponseBean）をjspへ渡すための処理を記述しなさい。
             // Tips: キー名は「CONST_REQUST_KEY_FOR_RESPONSE_BEAN」、バリューにはレスポンス情報をセット
-            request.setAttribute([ここへ記述], [ここへ記述]);
+            request.setAttribute(CONST_REQUST_KEY_FOR_RESPONSE_BEAN, this.responseBean);
 
             Logger.log(new Throwable(), "遷移先 = " + this.destinationTarget);
 
