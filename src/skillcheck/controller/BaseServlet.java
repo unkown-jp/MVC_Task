@@ -30,7 +30,7 @@ public abstract class BaseServlet extends HttpServlet {
     private static final String CONST_SESSION_KEY_FOR_LOGIN = "login";
 
     // FIXME Step-4-1: リクエスト判別用のボタンの属性名を記述しなさい。
-    protected static final String CONST_ELEMENT_NAME_REQUEST = "[ここへ記述]";
+    protected static final String CONST_ELEMENT_NAME_REQUEST = "requestType";
 	protected static final String CONST_REQUST_KEY_FOR_SENDER = "sender";
     protected static final String CONST_REQUST_KEY_FOR_REDIRECT = "redirect";
     protected static final String CONST_REQUST_KEY_FOR_RESPONSE_BEAN = "responseBean";
@@ -40,7 +40,7 @@ public abstract class BaseServlet extends HttpServlet {
     
     // FIXME Step-4-2: 実行結果表示用のjspファイルのパスを記述しなさい。
     // Tips: login.jspとは違ってブラウザのアドレスバーにURL直打ちでアクセスできないようにWEB-INF配下に配置してあるので注意してください。
-    protected static final String CONST_DESTINATION_RESULT_JSP = "[ここへ記述]";
+    protected static final String CONST_DESTINATION_RESULT_JSP = "WEB-INF/employeeResult.jsp";
 
     /* フィールド変数の定義 */
     /** フォーワード先 */
@@ -152,7 +152,7 @@ public abstract class BaseServlet extends HttpServlet {
             // Tips1: 社員情報管理サービスはインスタンスが生成済みのものを利用すること
             // Tips2: 完全一致検索の社員情報取得を呼び出すこと
             // Tips3: 第二引数の渡し方に注意すること
-        	responseBean = [ここへ記述];
+        	responseBean = this.ems.getEmployeeData(ExecuteCase.FIND_BY_EMPID, new EmployeeBean());
 
             // 最初の1件を取得
             resEmployeeBean = responseBean.getEmplyeeBeanList().stream().findFirst().orElse(null);
